@@ -27,7 +27,11 @@
                             <button type="button"
                                 class="group inline-flex items-center gap-x-3 text-gray-800 text-sm focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none">
                                 <span
+<<<<<<< HEAD
                                     class="size-8 md:size-10 flex flex-col justify-center items-center bg-black text-white rounded-full group-hover:scale-105 group-focus:scale-105 transition-transform duration-300 ease-in-out">
+=======
+                                    class="size-8 md:size-10 flex flex-col justify-center items-center bg-black text-white rounded-full group-hover:scale-105 group-focus:scale-105 transition-transform duration-300 ease-in-out dark:bg-white dark:text-black">
+>>>>>>> 8efd5e64c6eb1f9e97a1ba49b82c5b12c169b6cb
                                     <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16"
                                         height="16" fill="currentColor" viewBox="0 0 16 16">
                                         <path

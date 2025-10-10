@@ -96,6 +96,7 @@
                 </div>
                 <div>
                     <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
+<<<<<<< HEAD
                         href="{{ route('front.products') }}">Product</a>
                 </div>
                 <div>
@@ -105,6 +106,17 @@
                 <div>
                     <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
                         href="{{ route('front.contact') }}">Contact</a>
+=======
+                        href="#">Listings</a>
+                </div>
+                <div>
+                    <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
+                        href="#">Product</a>
+                </div>
+                <div>
+                    <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
+                        href="#">Checkout</a>
+>>>>>>> 8efd5e64c6eb1f9e97a1ba49b82c5b12c169b6cb
                 </div>
             </div>
         </div>
