@@ -96,15 +96,15 @@
                 </div>
                 <div>
                     <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-                        href="#">Listings</a>
+                        href="{{ route('front.products') }}">Product</a>
                 </div>
                 <div>
                     <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-                        href="#">Product</a>
+                        href="{{ route('front.about') }}">About Us</a>
                 </div>
                 <div>
                     <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-                        href="#">Checkout</a>
+                        href="{{ route('front.contact') }}">Contact</a>
                 </div>
             </div>
         </div>

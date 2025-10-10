@@ -43,6 +43,13 @@ class Setting extends Model implements HasMedia
         return self::firstOrCreate();
     }
 
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('settings')
+            ->useDisk('public')
+            ->singleFile();
+    }
+
     public function registerMediaConversions(?Media $media = null): void
     {
         $this

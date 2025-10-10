@@ -20,11 +20,17 @@ class Category extends Model implements HasMedia
         'is_active',
     ];
 
-
     // Relasi ke Product
     public function products()
     {
         return $this->hasMany(Product::class, 'category_id');
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('categories')
+            ->useDisk('public')
+            ->singleFile();
     }
 
     public function registerMediaConversions(?Media $media = null): void
