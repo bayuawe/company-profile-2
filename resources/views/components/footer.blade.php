@@ -1,5 +1,5 @@
 <!-- ========== FOOTER ========== -->
-<footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+<footer class="max-w-7xl px-4 sm:px-6 lg:px-8 py-4 lg:py-6 mx-auto">
     <!-- Grid -->
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
@@ -36,7 +36,7 @@
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
                         href="#">Blog</a></p>
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
-                        href="#">Careers</a> <span class="inline text-blue-600">— We're hiring</span></p>
+                        href="#">Careers</a> <span class="inline text-yellow-500">— We're hiring</span></p>
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
                         href="#">Customers</a></p>
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
@@ -74,7 +74,7 @@
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
                         href="#">Status</a></p>
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
-                        href="#">GitHub</a> <span class="inline text-blue-600">— New</span></p>
+                        href="#">GitHub</a> <span class="inline text-yellow-500">— New</span></p>
             </div>
 
             <h4 class="mt-7 text-xs font-semibold text-gray-900 uppercase">Industries</h4>

@@ -21,7 +21,6 @@ class Product extends Model implements HasMedia
         'category_id',
         'description',
         'price',
-        'image',
         'is_active',
         'featured',
     ];
@@ -58,9 +57,9 @@ class Product extends Model implements HasMedia
      */
     public function getImageUrlAttribute(): string
     {
-        // Try to get the conversion url first from the 'images' collection,
+        // Try to get the conversion url first from the 'products' collection,
         // then fall back to 'default', then any media URL.
-        $url = $this->getFirstMediaUrl('images', 'preview');
+        $url = $this->getFirstMediaUrl('products', 'preview');
 
         if (empty($url)) {
             $url = $this->getFirstMediaUrl('default', 'preview');

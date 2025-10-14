@@ -5,9 +5,13 @@
     <main id="content">
         @include('components.hero')
 
-        @include('components.work')
+        @include('components.category')
+
+        @include('components.product')
 
         @include('components.testimonial')
+
+        @include('components.faq')
 
         @include('components.cta')
     </main>

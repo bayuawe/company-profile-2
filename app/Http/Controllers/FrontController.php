@@ -16,7 +16,7 @@ class FrontController extends Controller
         $featuredProducts = Product::with('category')
             ->where('featured', true)
             ->latest()
-            ->take(6)
+            ->take(4)
             ->get();
 
         $categories = Category::withCount('products')

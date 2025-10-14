@@ -3,7 +3,7 @@
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [FrontController::class, 'index'])->name('home');
+Route::get('/', [FrontController::class, 'index'])->name('index');
 Route::get('/products', [FrontController::class, 'products'])->name('front.products');
 Route::get('/products/{slug}', [FrontController::class, 'productDetail'])->name('front.products.detail');
 Route::get('/about', [FrontController::class, 'about'])->name('front.about');

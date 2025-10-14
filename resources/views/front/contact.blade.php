@@ -3,8 +3,6 @@
 @section('content')
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content">
-        @include('components.hero')
-
         @include('components.cta')
     </main>
     <!-- ========== END MAIN CONTENT ========== -->

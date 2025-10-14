@@ -1,5 +1,5 @@
 <!-- Announcement Banner -->
-<div class="py-2  text-center bg-yellow-400">
+<div class="py-2  text-center bg-yellow-500">
     <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <p class="text-sm text-black">
             Free delivery&nbsp;on orders over $50
@@ -91,36 +91,40 @@
             <div
                 class="flex flex-col gap-y-4 gap-x-0 mt-5 lg:flex-row lg:justify-center lg:items-center lg:gap-y-0 lg:gap-x-7 lg:mt-0">
                 <div>
-                    <a class="relative inline-block text-black focus:outline-hidden before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400"
-                        href="#" aria-current="page">Home</a>
+                    <a href="{{ route('index') }}"
+                        class="relative inline-block text-black focus:outline-hidden
+       {{ Route::currentRouteNamed('index') ? 'before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400' : 'hover:text-gray-600 focus:text-gray-600' }}">
+                        Home
+                    </a>
                 </div>
+
                 <div>
-                    <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-<<<<<<< HEAD
-                        href="{{ route('front.products') }}">Product</a>
+                    <a href="{{ route('front.products') }}"
+                        class="relative inline-block text-black focus:outline-hidden
+       {{ Route::currentRouteNamed('front.products') ? 'before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400' : 'hover:text-gray-600 focus:text-gray-600' }}">
+                        Product
+                    </a>
                 </div>
+
                 <div>
-                    <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-                        href="{{ route('front.about') }}">About Us</a>
+                    <a href="{{ route('front.about') }}"
+                        class="relative inline-block text-black focus:outline-hidden
+       {{ Route::currentRouteNamed('front.about') ? 'before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400' : 'hover:text-gray-600 focus:text-gray-600' }}">
+                        About Us
+                    </a>
                 </div>
+
                 <div>
-                    <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-                        href="{{ route('front.contact') }}">Contact</a>
-=======
-                        href="#">Listings</a>
-                </div>
-                <div>
-                    <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-                        href="#">Product</a>
-                </div>
-                <div>
-                    <a class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600"
-                        href="#">Checkout</a>
->>>>>>> 8efd5e64c6eb1f9e97a1ba49b82c5b12c169b6cb
+                    <a href="{{ route('front.contact') }}"
+                        class="relative inline-block text-black focus:outline-hidden
+       {{ Route::currentRouteNamed('front.contact') ? 'before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400' : 'hover:text-gray-600 focus:text-gray-600' }}">
+                        Contact
+                    </a>
                 </div>
             </div>
         </div>
         <!-- End Collapse -->
+
     </nav>
 </header>
 <!-- ========== END HEADER ========== -->

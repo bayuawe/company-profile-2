@@ -2,11 +2,10 @@
 
 namespace App\Filament\Resources\Products\Schemas;
 
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
@@ -26,7 +25,7 @@ class ProductForm
                             ->schema([
                                 TextInput::make('name')
                                     ->live(onBlur: true)
-                                    ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state)))
+                                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
                                     ->required(),
                                 TextInput::make('slug')
                                     ->required(),
@@ -51,10 +50,11 @@ class ProductForm
                                     ->prefix('Rp.'),
                                 SpatieMediaLibraryFileUpload::make('image')
                                     ->collection('products')
-                                    ->conversion('preview')
-                                    ->imageEditor()
-                                    ->panelLayout('integrated')
-                                    ->label('Gambar Produk'),
+                                    ->image()
+                                    ->imageResizeMode('contain')
+                                    ->imageResizeTargetWidth('1200')
+                                    ->imageResizeTargetHeight('1200')
+                                    ->required(),
                             ]),
                     ])
                     ->columnSpanFull(),

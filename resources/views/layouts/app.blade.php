@@ -18,7 +18,9 @@
 
 <body class="bg-white">
     @include('components.navbar')
-    @yield('content')
+    <div class="max-w-7xl px-4 sm:px-6 lg:px-8 py-4 lg:py-6 mx-auto">
+        @yield('content')
+    </div>
     @include('components.footer')
 </body>
 

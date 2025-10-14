@@ -40,4 +40,31 @@ class Category extends Model implements HasMedia
             ->fit(Fit::Contain, 300, 300)
             ->nonQueued();
     }
+
+    /**
+     * Accessor to get the bank logo URL.
+     * Returns the 'preview' conversion URL if available, otherwise the original media URL.
+     * If no media exists, returns an empty string.
+     *
+     * Usage in Blade: <img src="{{ $bank->logo_url ?: asset('images/no-image.png') }}" alt="...">
+     *
+     * @return string
+     */
+    public function getLogoUrlAttribute(): string
+    {
+        // Try to get the conversion url first from the 'categories' collection,
+        // then fall back to 'default', then any media URL.
+        $url = $this->getFirstMediaUrl('categories', 'preview');
+
+        if (empty($url)) {
+            $url = $this->getFirstMediaUrl('default', 'preview');
+        }
+
+        // Fallback to the original media url (no conversion)
+        if (empty($url)) {
+            $url = $this->getFirstMediaUrl();
+        }
+
+        return $url ?: '';
+    }
 }

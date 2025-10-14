@@ -23,6 +23,8 @@ class ProductsTable
                 SpatieMediaLibraryImageColumn::make('image')
                     ->collection('products')
                     ->conversion('preview')
+                    ->conversion('thumbnail')
+                    ->square()
                     ->label('Image'),
                 TextColumn::make('name')
                     ->sortable()
