@@ -9,93 +9,140 @@
                     Our Products
                 </h1>
             </div>
-            <!-- Card Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-                @foreach ($products as $product)
-                    <!-- Card -->
-                    <div class="group flex flex-col">
-                        <div class="relative">
-                            <div
-                                class="aspect-4/4 overflow-hidden rounded-2xl bg-gray-100 flex items-center justify-center text-gray-500 font-semibold">
-                                @if ($product->hasMedia('products'))
-                                    <img class="w-full h-full object-cover rounded-2xl"
-                                        src="{{ $product->getFirstMediaUrl('products', 'preview') }}"
-                                        alt="{{ $product->name }}">
-                                @else
-                                    No Image
-                                @endif
-                            </div>
 
-                            <div class="pt-4">
-                                <h3 class="font-medium md:text-lg text-black">
-                                    {{ $product->name }}
-                                </h3>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
 
-                                <p class="mt-2 font-semibold text-black">
-                                    Rp.{{ number_format($product->price, 2) }}
-                                </p>
-                            </div>
-
-                            <a class="after:absolute after:inset-0 after:z-1" href="#"></a>
-                        </div>
-
-                        <div class="mb-2 mt-4 text-sm">
-                            <!-- List -->
-                            <div class="flex flex-col">
-                                <!-- Item -->
-                                <div class="py-3 border-t border-gray-100">
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <div>
-                                            <span class="font-medium text-black">Tasting Notes:</span>
-                                        </div>
-
-                                        <div class="text-end">
-                                            <span class="text-black">Hazelnut, Grape, Milk Chocolate</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Item -->
-
-                                <!-- Item -->
-                                <div class="py-3 border-t border-gray-100">
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <div>
-                                            <span class="font-medium text-black">Origin:</span>
-                                        </div>
-
-                                        <div class="flex justify-end">
-                                            <span class="text-black">Brazil</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Item -->
-
-                                <!-- Item -->
-                                <div class="py-3 border-t border-gray-100">
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <div>
-                                            <span class="font-medium text-black">Region:</span>
-                                        </div>
-
-                                        <div class="text-end">
-                                            <span class="text-black">San Paulo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Item -->
-                            </div>
-                            <!-- End List -->
-                        </div>
-
-                        <div class="mt-auto">
-                            <a class="py-2 px-3 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-yellow-400 text-black hover:bg-yellow-500 focus:outline-hidden focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none"
-                                href="{{ route('front.products.detail', $product->slug) }}">
-                                See Details
-                            </a>
-                        </div>
+                <!-- Sidebar -->
+                <aside class="lg:col-span-1 w-full relative lg:sticky lg:top-4 lg:h-fit lg:self-start">
+                    <!-- Categories Filter -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-warning">Categories</h2>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="{{ route('front.products') }}"
+                                    class="flex justify-between items-center hover:bg-yellow-400 p-2 rounded {{ !request('category') ? 'bg-yellow-500 text-neutral font-bold' : 'text-gray-400' }}">
+                                    <span>All Products</span>
+                                    <span class="bg-warning text-white px-2 py-1 rounded-full text-sm">
+                                        {{ $products->total() }}
+                                    </span>
+                                </a>
+                            </li>
+                            @foreach ($categories as $category)
+                                <li>
+                                    <a href="{{ route('front.products', array_merge(request()->except('category'), ['category' => $category->id])) }}"
+                                        class="flex justify-between items-center hover:bg-yellow-400 p-2 rounded {{ request('category') == $category->id ? 'bg-yellow-500 text-neutral font-bold' : 'text-gray-400' }}">
+                                        <span>{{ $category->name }}</span>
+                                        <span class="bg-warning text-white px-2 py-1 rounded-full text-sm">
+                                            {{ $category->products_count }}
+                                        </span>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
-                    <!-- End Card -->
-                @endforeach
+
+                    <!-- Price Range Filter -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-neutral">Price Range</h2>
+                        <form action="{{ route('front.products') }}" method="get" class="space-y-4">
+                            @foreach (request()->except(['price_min', 'price_max']) as $key => $value)
+                                <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+                            @endforeach
+
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-1">Minimum Price</label>
+                                <div class="max-w-sm space-y-3">
+                                    <input type="number" name="price_min" value="{{ request('price_min') }}"
+                                        class="py-2.5 sm:py-3 px-4 block w-full border-yellow-500 rounded-lg sm:text-sm focus:border-yellow-500 focus:ring-yellow-500 disabled:opacity-50 disabled:pointer-events-none"
+                                        placeholder="Minimum Price">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-1">Maximum Price</label>
+                                <div class="max-w-sm space-y-3">
+                                    <input type="number" name="price_max" value="{{ request('price_max') }}"
+                                        class="py-2.5 sm:py-3 px-4 block w-full border-yellow-500 rounded-lg sm:text-sm focus:border-yellow-500 focus:ring-yellow-500 disabled:opacity-50 disabled:pointer-events-none"
+                                        placeholder="Maximum Price">
+                                </div>
+                            </div>
+
+                            <div class="flex gap-2">
+                                <button type="submit"
+                                    class="flex-1 bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition">
+                                    Apply Filter
+                                </button>
+
+                                <a href="{{ route('front.products') }}"
+                                    class="flex-1 text-center bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-200 transition">
+                                    Clear Filter
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+
+                </aside>
+
+                <!-- Grid Produk -->
+                <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    @if ($products->isEmpty())
+                        <div class="col-span-full flex flex-col items-center justify-center text-center py-16">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-20 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+                            </svg>
+                            <p class="text-gray-500 text-lg font-medium">No products found.</p>
+                        </div>
+                    @else
+                        @foreach ($products as $product)
+                            <!-- Card -->
+                            <div class="group flex flex-col relative">
+                                <div class="relative">
+                                    <div
+                                        class="aspect-4/4 overflow-hidden rounded-2xl bg-gray-100 flex items-center justify-center text-gray-500 font-semibold relative">
+                                        @if ($product->hasMedia('products'))
+                                            <img class="w-full h-full object-cover rounded-2xl"
+                                                src="{{ $product->getFirstMediaUrl('products', 'preview') }}"
+                                                alt="{{ $product->name }}">
+
+                                            @if ($product->featured)
+                                                <span
+                                                    class="absolute top-2 right-2 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-500 text-white">
+                                                    Featured
+                                                </span>
+                                            @endif
+
+                                            <span
+                                                class="absolute bottom-2 left-2 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium  text-white">
+                                                {{ $product->category->name }}
+                                            </span>
+                                        @else
+                                            No Image
+                                        @endif
+                                    </div>
+
+                                    <div class="pt-4">
+                                        <h3 class="font-medium md:text-lg text-black">
+                                            {{ $product->name }}
+                                        </h3>
+
+                                        <p class="mt-2 font-semibold text-black">
+                                            Rp.{{ number_format($product->price, 2) }}
+                                        </p>
+                                    </div>
+
+                                    <a href="{{ route('front.products.detail', $product->slug) }}"
+                                        class="absolute inset-0 z-10"></a>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+                        @endforeach
+                    @endif
+
+
+                </div>
+
             </div>
 
             <div class="flex flex-row justify-center mt-8">
@@ -148,9 +195,9 @@
                             class="min-h-9.5 min-w-9.5 py-2 px-2.5 inline-flex justify-center items-center gap-x-1.5 text-sm rounded-lg text-yellow-500 hover:bg-gray-100 focus:outline-hidden"
                             aria-label="Next">
                             <span>Next</span>
-                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m9 18 6-6-6-6"></path>
                             </svg>
                         </a>
@@ -159,9 +206,9 @@
                             class="min-h-9.5 min-w-9.5 py-2 px-2.5 inline-flex justify-center items-center gap-x-1.5 text-sm rounded-lg text-gray-400 bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
                             aria-label="Next" disabled>
                             <span>Next</span>
-                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m9 18 6-6-6-6"></path>
                             </svg>
                         </button>
@@ -169,6 +216,8 @@
                 </nav>
                 <!-- End Pagination -->
             </div>
+
+
             <!-- End Card Grid -->
         </div>
         <!-- End Listings -->

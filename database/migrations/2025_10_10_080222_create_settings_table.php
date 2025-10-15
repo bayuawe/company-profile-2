@@ -16,21 +16,17 @@ return new class extends Migration
             // Basic Settings
             $table->string('site_title')->nullable();
             $table->string('site_description')->nullable();
-            $table->string('site_logo')->nullable();
-            $table->string('site_favicon')->nullable();
 
             // Meta Information
             $table->text('meta_description')->nullable();
             $table->text('meta_keywords')->nullable();
 
             // Hero Section
-            $table->string('hero_image')->nullable();
             $table->string('hero_title')->nullable();
             $table->string('hero_subtitle')->nullable();
 
             // About Section
             $table->text('about_content')->nullable();
-            $table->string('about_image')->nullable();
 
             // Contact Information
             $table->string('contact_address')->nullable();

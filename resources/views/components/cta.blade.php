@@ -1,6 +1,6 @@
 <div class="py-6 md:py-12 max-w-2xl text-center mx-auto">
     <h2 class="font-medium text-black text-2xl sm:text-4xl ">
-        Contacts
+        Kontak Kami
     </h2>
 </div>
 
@@ -15,7 +15,7 @@
     <div class="space-y-8 lg:space-y-16">
         <div>
             <h3 class="mb-5 font-semibold text-black ">
-                Our address
+                Alamat Kami
             </h3>
 
             <!-- Grid -->
@@ -29,12 +29,8 @@
                     </svg>
 
                     <div class="grow">
-                        <p class="text-sm text-gray-600 ">
-                            United Kingdom
-                        </p>
                         <address class="mt-1 text-black not-italic ">
-                            300 Bath Street, Tay House<br>
-                            Glasgow G2 4JR
+                            {{ $settings->contact_address }}
                         </address>
                     </div>
                 </div>
@@ -44,7 +40,7 @@
 
         <div>
             <h3 class="mb-5 font-semibold text-black ">
-                Our contacts
+                Hubungi Kami
             </h3>
 
             <!-- Grid -->
@@ -61,12 +57,12 @@
 
                     <div class="grow">
                         <p class="text-sm text-gray-600 ">
-                            Email us
+                            Email
                         </p>
                         <p>
                             <a class="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black"
                                 href="mailto:example@site.so">
-                                hello@example.so
+                                {{ $settings->contact_email }}
                             </a>
                         </p>
                     </div>
@@ -82,12 +78,12 @@
 
                     <div class="grow">
                         <p class="text-sm text-gray-600 ">
-                            Call us
+                            Telp.
                         </p>
                         <p>
                             <a class="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black"
                                 href="mailto:example@site.so">
-                                +44 222 777-000
+                                {{ $settings->contact_phone }}
                             </a>
                         </p>
                     </div>

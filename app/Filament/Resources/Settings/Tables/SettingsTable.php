@@ -5,7 +5,6 @@ namespace App\Filament\Resources\Settings\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -28,10 +27,10 @@ class SettingsTable
                     ->collection('site_favicons')
                     ->conversion('preview')
                     ->label('Site Favicon'),
-                SpatieMediaLibraryImageColumn::make('hero_image')
+                SpatieMediaLibraryImageColumn::make('hero_images')
                     ->collection('hero_images')
                     ->conversion('preview')
-                    ->label('Hero Image'),
+                    ->label('Hero Images'),
                 TextColumn::make('hero_title')
                     ->searchable(),
                 TextColumn::make('hero_subtitle')

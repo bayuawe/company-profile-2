@@ -2,7 +2,7 @@
 <div class="py-2  text-center bg-yellow-500">
     <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <p class="text-sm text-black">
-            Free delivery&nbsp;on orders over $50
+            Selamat datang di website resmi Sari Pasundan Pekanbaru! Nikmati <strong>diskon 20%</strong> untuk dengan mendaftar menjadi reseller.
         </p>
     </div>
 </div>

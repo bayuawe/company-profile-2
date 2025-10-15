@@ -8,85 +8,41 @@
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
     <!-- Card -->
     @foreach ($featuredProducts as $product)
-        <div class="group flex flex-col">
+        <div class="group flex flex-col relative">
             <div class="relative">
-                @if ($product->hasMedia('products'))
-                    <div class="aspect-4/4 overflow-hidden rounded-2xl">
-                        <img class="size-full object-cover rounded-2xl" src="{{ $product->image_url }}"
-                            alt="Product Image">
-                    </div>
-                @else
-                    <div class="aspect-4/4 overflow-hidden rounded-2xl flex items-center justify-center bg-gray-200">
-                        <span class="text-gray-500 text-sm">No Image</span>
-                    </div>
-                @endif
+                <div
+                    class="aspect-4/4 overflow-hidden rounded-2xl bg-gray-100 flex items-center justify-center text-gray-500 font-semibold relative">
+                    @if ($product->hasMedia('products'))
+                        <img class="w-full h-full object-cover rounded-2xl"
+                            src="{{ $product->getFirstMediaUrl('products', 'preview') }}" alt="{{ $product->name }}">
+
+                        @if ($product->featured)
+                            <span
+                                class="absolute top-2 right-2 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-500 text-white">
+                                Featured
+                            </span>
+                        @endif
+
+                        <span
+                            class="absolute bottom-2 left-2 inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium  text-white">
+                            {{ $product->category->name }}
+                        </span>
+                    @else
+                        No Image
+                    @endif
+                </div>
 
                 <div class="pt-4">
-                    <h3 class="font-medium md:text-lg text-black ">
+                    <h3 class="font-medium md:text-lg text-black">
                         {{ $product->name }}
                     </h3>
 
-                    <p class="mt-2 font-semibold text-black ">
-                        {{ $product->price }}
+                    <p class="mt-2 font-semibold text-black">
+                        Rp.{{ number_format($product->price, 2) }}
                     </p>
                 </div>
 
-                <a class="after:absolute after:inset-0 after:z-1" href="#"></a>
-            </div>
-
-            <div class="mb-2 mt-4 text-sm">
-                <!-- List -->
-                <div class="flex flex-col">
-                    <!-- Item -->
-                    <div class="py-3 border-t border-gray-200">
-                        <div class="grid grid-cols-2 gap-2">
-                            <div>
-                                <span class="font-medium text-black ">Tasting Notes:</span>
-                            </div>
-
-                            <div class="text-end">
-                                <span class="text-black ">Hazelnut, Grape, Milk Chocolate</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Item -->
-
-                    <!-- Item -->
-                    <div class="py-3 border-t border-gray-200">
-                        <div class="grid grid-cols-2 gap-2">
-                            <div>
-                                <span class="font-medium text-black ">Origin:</span>
-                            </div>
-
-                            <div class="flex justify-end">
-                                <span class="text-black ">Brazil</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Item -->
-
-                    <!-- Item -->
-                    <div class="py-3 border-t border-gray-200">
-                        <div class="grid grid-cols-2 gap-2">
-                            <div>
-                                <span class="font-medium text-black ">Region:</span>
-                            </div>
-
-                            <div class="text-end">
-                                <span class="text-black ">San Paulo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Item -->
-                </div>
-                <!-- End List -->
-            </div>
-
-            <div class="mt-auto">
-                <a class="py-2 px-3 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-yellow-400 text-black hover:bg-yellow-500 focus:outline-hidden focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none"
-                    href="#">
-                    Buy now
-                </a>
+                <a href="{{ route('front.products.detail', $product->slug) }}" class="absolute inset-0 z-10"></a>
             </div>
         </div>
     @endforeach

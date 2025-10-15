@@ -30,22 +30,24 @@ class FrontController extends Controller
 
     public function products(Request $request)
     {
-        $query = Product::with(['category', 'media'])->where('is_active', true);
+        $query = Product::with(['category', 'media'])
+            ->where('is_active', true);
 
         // Filter by category
-        if ($request->has('category')) {
+        if ($request->filled('category')) {
             $query->where('category_id', $request->category);
         }
 
         // Filter by price range
-        if ($request->has('price_min')) {
-            $query->where('price', '>=', $request->price_min);
-        }
-        if ($request->has('price_max')) {
-            $query->where('price', '<=', $request->price_max);
+        if ($request->filled('price_min') && is_numeric($request->price_min)) {
+            $query->where('price', '>=', (float) $request->price_min);
         }
 
-        // Sort products
+        if ($request->filled('price_max') && is_numeric($request->price_max)) {
+            $query->where('price', '<=', (float) $request->price_max);
+        }
+
+        // Sorting
         $sort = $request->get('sort', 'latest');
         switch ($sort) {
             case 'price_low':
@@ -62,8 +64,6 @@ class FrontController extends Controller
                 break;
         }
 
-        
-
         $products = $query->paginate(12)->withQueryString();
         $categories = Category::withCount('products')->get();
         $settings = Setting::getSiteSettings();
@@ -75,6 +75,7 @@ class FrontController extends Controller
     {
         $categories = Category::all();
         $settings = Setting::getSiteSettings();
+
         return view('front.about', compact('categories', 'settings'));
     }
 
@@ -82,6 +83,7 @@ class FrontController extends Controller
     {
         $categories = Category::all();
         $settings = Setting::getSiteSettings();
+
         return view('front.contact', compact('categories', 'settings'));
     }
 
@@ -103,10 +105,10 @@ class FrontController extends Controller
         $settings = Setting::getSiteSettings();
         $settings->phone = preg_replace('/[^0-9]/', '', $settings->phone);
         if (str_starts_with($settings->phone, '0')) {
-            $settings->phone = '62' . substr($settings->phone, 1);
+            $settings->phone = '62'.substr($settings->phone, 1);
         }
 
-        return view('front.product-detail', compact('product', 'relatedProducts', 'settings'));
+        return view('front.product-detail', compact('product', 'relatedProducts', 'categories', 'settings'));
     }
 
     public function submitContact(Request $request)

@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 md:items-center">
         <div class="relative h-80 md:h-150 bg-gray-100 rounded-2xl ">
             <img class="absolute inset-0 size-full object-cover rounded-2xl"
-                src="https://images.unsplash.com/photo-1507914464562-6ff4ac29692f?q=80&w=768&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="{{ $settings->getFirstMediaUrl('about_image', 'preview') }}"
                 alt="Testimonials Image">
         </div>
         <!-- End Col -->

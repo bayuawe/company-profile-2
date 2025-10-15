@@ -14,10 +14,10 @@ class CategoryTableSeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            ['name' => 'Kue', 'slug' => 'kue', 'image' => null, 'is_active' => true],
-            ['name' => 'Snack', 'slug' => 'snack', 'image' => null, 'is_active' => true],
-            ['name' => 'Minuman', 'slug' => 'minuman', 'image' => null, 'is_active' => true],
-            ['name' => 'Menu Lainnya', 'slug' => 'menu-lainnya', 'image' => null, 'is_active' => true],
+            ['name' => 'Kue', 'slug' => 'kue', 'is_active' => true],
+            ['name' => 'Snack', 'slug' => 'snack', 'is_active' => true],
+            ['name' => 'Minuman', 'slug' => 'minuman', 'is_active' => true],
+            ['name' => 'Menu Lainnya', 'slug' => 'menu-lainnya', 'is_active' => true],
         ];
 
         foreach ($categories as $category) {

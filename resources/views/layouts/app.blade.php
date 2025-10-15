@@ -10,7 +10,7 @@
     @vite('resources/js/app.js')
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="{{ $settings->getFirstMediaUrl('site_favicon', 'preview') }}" type="image/x-icon">
 
     <!-- Google Font Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">

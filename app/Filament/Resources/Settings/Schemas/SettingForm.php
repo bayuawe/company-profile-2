@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources\Settings\Schemas;
 
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
@@ -28,13 +27,13 @@ class SettingForm
                         Grid::make(2)
                             ->schema([
                                 SpatieMediaLibraryFileUpload::make('site_logo')
-                                    ->collection('site_logos')
+                                    ->collection('site_logo')
                                     ->conversion('preview')
                                     ->imageEditor()
                                     ->panelLayout('integrated')
                                     ->label('Logo Situs'),
                                 SpatieMediaLibraryFileUpload::make('site_favicon')
-                                    ->collection('site_favicons')
+                                    ->collection('site_favicon')
                                     ->conversion('preview')
                                     ->imageEditor()
                                     ->panelLayout('integrated')
@@ -51,12 +50,11 @@ class SettingForm
 
                 Section::make('Hero Section')
                     ->schema([
-                        SpatieMediaLibraryFileUpload::make('hero_image')
+                        SpatieMediaLibraryFileUpload::make('hero_images') // pakai jamak
                             ->collection('hero_images')
+                            ->multiple() // aktifkan multiple upload
                             ->conversion('preview')
-                            ->imageEditor()
-                            ->panelLayout('integrated')
-                            ->label('Hero Image'),
+                            ->label('Hero Images'),
                         Grid::make(2)
                             ->schema([
                                 TextInput::make('hero_title')
@@ -72,7 +70,7 @@ class SettingForm
                             ->label('About Content')
                             ->columnSpanFull(),
                         SpatieMediaLibraryFileUpload::make('about_image')
-                            ->collection('about_images')
+                            ->collection('about_image')
                             ->conversion('preview')
                             ->imageEditor()
                             ->panelLayout('integrated')
