@@ -1,4 +1,4 @@
-<div class="mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
+<div class="py-6 md:py-12 max-w-2xl text-center mx-auto">
     <h2 class="font-medium text-black text-2xl sm:text-4xl ">
         Contacts
     </h2>

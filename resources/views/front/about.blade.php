@@ -7,16 +7,29 @@
         <!-- Timeline -->
         <div class="container py-16">
             <div class="pb-4">
-                <h2 class="text-3xl text-gray-800 font-bold lg:text-4xl">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800">
                     Kilas Balik Perjalanan Kami
                 </h2>
-                <p class="mt-3 text-gray-800">
-                    For as long as there have been cities, the public square has been a fundamental part of the
-                    urban landscape - an open, approachable space to meet and engage with friends and neighbours.
-                    Space aims to capture this spirit of bringing people together in an exciting, welcoming
-                    environment.
+                <p class="mt-3 text-gray-800 text-justify leading-relaxed">
+                    Sari Pasundan lahir dari semangat untuk memperkenalkan Kue Balok sebagai makanan khas Jawa Barat ke
+                    seluruh Indonesia.
+                    Berawal dari satu gerai kecil, kami terus berkembang dan menghadirkan cita rasa autentik yang disukai
+                    banyak orang.
+                </p>
+                <p class="mt-3 text-gray-800 text-justify leading-relaxed">
+                    Sejak berdiri pada 3 November 2018 di bawah naungan CV. Sari Pasundan Berkah, kami berkomitmen menjaga
+                    kualitas rasa
+                    dan bahan baku. Tagline “Lembut, Lumer, Coklat Asli” menjadi identitas produk kami yang telah terdaftar
+                    di HAKI.
+                </p>
+                <p class="mt-3 text-gray-800 text-justify leading-relaxed">
+                    Kami percaya produk lokal berkualitas harus mudah diakses siapa pun. Dengan visi menghadirkan Kue Balok
+                    terbaik
+                    dengan harga terjangkau, Sari Pasundan terus memperluas jangkauan dan jaringan penjualan ke berbagai
+                    daerah di Indonesia.
                 </p>
             </div>
+
             <!-- Item -->
             <div class="group relative flex gap-x-5">
                 <!-- Icon -->
@@ -39,35 +52,16 @@
                 <!-- Right Content -->
                 <div class="grow pb-8 group-last:pb-0">
                     <h3 class="mb-1 text-xs text-gray-600">
-                        2023 - Present
+                        2018
                     </h3>
 
                     <p class="font-semibold text-sm text-gray-800">
-                        Web Designer & Web Developer
+                        Outlet pertama kami dibuka di Samarinda, Kalimantan Timur pada 3 November 2018.
                     </p>
 
                     <p class="mt-1 text-sm text-gray-600">
-                        The company has high expectations and using OKRs there is a mutual understanding of expectations and
-                        performance.
+                        Kami memulai perjalanan dengan satu gerai kecil yang menyajikan Kue Balok khas Jawa Barat.
                     </p>
-
-                    <ul class="list-disc ms-6 mt-3 space-y-1.5">
-                        <li class="ps-1 text-sm text-gray-600">
-                            Designed template UIs and design systems in Figma.
-                        </li>
-                        <li class="ps-1 text-sm text-gray-600">
-                            Converted UIs into responsive HTML and CSS with a mobile-first approach.
-                        </li>
-                        <li class="ps-1 text-sm text-gray-600">
-                            Created custom illustrations and item description banners.
-                        </li>
-                        <li class="ps-1 text-sm text-gray-600">
-                            Provided detailed documentation and customer support on GitHub.
-                        </li>
-                        <li class="ps-1 text-sm text-gray-600">
-                            Engaged with users to address setup inquiries, bug issues, and feedback.
-                        </li>
-                    </ul>
                 </div>
                 <!-- End Right Content -->
             </div>
@@ -105,17 +99,16 @@
                 <!-- Right Content -->
                 <div class="grow pb-8 group-last:pb-0">
                     <h3 class="mb-1 text-xs text-gray-600">
-                        2021 - 2023
+                        2019
                     </h3>
 
                     <p class="font-semibold text-sm text-gray-800">
-                        Senior Software Engineer at Mailchimp
+                        Kami memperkenalkan varian rasa baru seperti Kue Balok Cokelat Pisang.
                     </p>
 
                     <p class="mt-1 text-sm text-gray-600">
-                        This is an excellent company and they reward their employees. It's becoming a big company but it's
-                        still private, so the culture is as good as it gets at 1,000+ employees if you ask me. Managers are
-                        still adapting to the growth I think, but everyone has to. Great place to work.
+                        Inovasi produk kami berlanjut dengan penambahan varian rasa yang menggugah selera, menjadikan
+                        Kue Balok lebih menarik bagi berbagai kalangan.
                     </p>
 
                     <div class="mt-3">
@@ -175,16 +168,16 @@
                 <!-- Right Content -->
                 <div class="grow pb-8 group-last:pb-0">
                     <h3 class="mb-1 text-xs text-gray-600">
-                        2011 - 2021
+                        2019
                     </h3>
 
                     <p class="font-semibold text-sm text-gray-800">
-                        Junior Software Engineer at Slack
+                        Dibuka cabang kedua di Pekanbaru, Riau pada 17 Juni 2019.
                     </p>
 
                     <p class="mt-1 text-sm text-gray-600">
-                        Work in Slack is one of the beautiful experience I can do in my entire life. There are a lot of
-                        interesting thing to learn and manager respect your time and your personality.
+                        Ekspansi kami berlanjut dengan pembukaan cabang kedua di Pekanbaru, memperluas jangkauan kami ke
+                        wilayah Sumatera.
                     </p>
                 </div>
                 <!-- End Right Content -->
@@ -212,26 +205,17 @@
                 <!-- Right Content -->
                 <div class="grow pb-8 group-last:pb-0">
                     <h3 class="mb-1 text-xs text-gray-600">
-                        2010 - 2011
+                        2021
                     </h3>
 
                     <p class="font-semibold text-sm text-gray-800">
-                        Freelance Graphic Designer
+                        Dibuka cabang ketiga di Panyabungan, Sumatera Utara pada 5 Mei 2021.
                     </p>
 
-                    <ul class="list-disc ms-6 mt-3 space-y-1.5">
-                        <li class="ps-1 text-sm text-gray-600">
-                            Worked with a diverse range of clients, delivering tailored design solutions.
-                        </li>
-                        <li class="ps-1 text-sm text-gray-600">
-                            Developed and maintained strong client relationships through effective communication and project
-                            management.
-                        </li>
-                        <li class="ps-1 text-sm text-gray-600">
-                            Utilized tools such as Notion for project tracking, Mailchimp for email marketing designs, Slack
-                            for team collaboration, and GitHub for version control and project sharing.
-                        </li>
-                    </ul>
+                    <p class="mt-1 text-sm text-gray-600">
+                        Ekspansi kami berlanjut dengan pembukaan cabang ketiga di Panyabungan, memperluas jangkauan kami ke
+                        wilayah Sumatera Utara.
+                    </p>
                 </div>
                 <!-- End Right Content -->
             </div>
@@ -247,10 +231,9 @@
                     Visi Kami
                 </h2>
                 <p class="mt-3 text-gray-800">
-                    For as long as there have been cities, the public square has been a fundamental part of the
-                    urban landscape - an open, approachable space to meet and engage with friends and neighbours.
-                    Space aims to capture this spirit of bringing people together in an exciting, welcoming
-                    environment.
+                    Kami ingin menjadi brand Kue Balok nasional yang dikenal luas, dipercaya konsumen, dan selalu
+                    menghadirkan rasa terbaik. Kami fokus menjaga kualitas, memperluas jangkauan, serta terus berinovasi
+                    agar produk kami dapat dinikmati oleh semua kalangan.
                 </p>
             </div>
 
@@ -258,9 +241,9 @@
                 <div class="space-y-6 lg:space-y-10">
                     <!-- Icon Block -->
                     <div class="flex gap-x-5 sm:gap-x-8">
-                        <svg class="shrink-0 mt-2 size-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-2 size-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect width="18" height="10" x="3" y="11" rx="2" />
                             <circle cx="12" cy="5" r="2" />
                             <path d="M12 7v4" />
@@ -269,10 +252,11 @@
                         </svg>
                         <div class="grow">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">
-                                Creative minds
+                                Kualitas Terjaga
                             </h3>
                             <p class="mt-1 text-gray-600">
-                                We choose our teams carefully. Our people are the secret to great work.
+                                Kami memastikan setiap produk dibuat dengan bahan pilihan dan proses produksi yang
+                                konsisten.
                             </p>
                         </div>
                     </div>
@@ -280,9 +264,9 @@
 
                     <!-- Icon Block -->
                     <div class="flex gap-x-5 sm:gap-x-8">
-                        <svg class="shrink-0 mt-2 size-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-2 size-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m7.5 4.27 9 5.15" />
                             <path
                                 d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
@@ -291,11 +275,10 @@
                         </svg>
                         <div class="grow">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">
-                                Effortless updates
+                                Harga Terjangkau
                             </h3>
                             <p class="mt-1 text-gray-600">
-                                Benefit from automatic updates to all boards any time you need to make a
-                                change to your website.
+                                Kami menjaga agar produk tetap ramah di kantong tanpa mengurangi kualitas.
                             </p>
                         </div>
                     </div>
@@ -303,17 +286,17 @@
 
                     <!-- Icon Block -->
                     <div class="flex gap-x-5 sm:gap-x-8">
-                        <svg class="shrink-0 mt-2 size-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-2 size-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                         </svg>
                         <div class="grow">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">
-                                Strong empathy
+                                Akses Mudah
                             </h3>
                             <p class="mt-1 text-gray-600">
-                                We've user tested our own process by shipping over 1k products for clients.
+                                Kami memperluas jaringan distribusi agar produk mudah ditemukan di berbagai daerah.
                             </p>
                         </div>
                     </div>
@@ -324,9 +307,9 @@
                 <div class="space-y-6 lg:space-y-10">
                     <!-- Icon Block -->
                     <div class="flex gap-x-5 sm:gap-x-8">
-                        <svg class="shrink-0 mt-2 size-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-2 size-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
                             <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
                             <path d="M4 22h16" />
@@ -336,10 +319,10 @@
                         </svg>
                         <div class="grow">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">
-                                Conquer the best
+                                Inovasi Rasa dan Produk
                             </h3>
                             <p class="mt-1 text-gray-600">
-                                We stay lean and help your product do one thing well.
+                                Kami mengembangkan varian rasa dan kemasan untuk memenuhi selera pasar.
                             </p>
                         </div>
                     </div>
@@ -347,9 +330,9 @@
 
                     <!-- Icon Block -->
                     <div class="flex gap-x-5 sm:gap-x-8">
-                        <svg class="shrink-0 mt-2 size-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-2 size-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                             <circle cx="9" cy="7" r="4" />
                             <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -357,11 +340,10 @@
                         </svg>
                         <div class="grow">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">
-                                Designing for people
+                                Pemberdayaan Lokal
                             </h3>
                             <p class="mt-1 text-gray-600">
-                                We actively pursue the right balance between functionality and aesthetics,
-                                creating delightful experiences.
+                                Kami melibatkan tenaga kerja dan bahan baku lokal untuk mendukung ekonomi daerah.
                             </p>
                         </div>
                     </div>
@@ -369,20 +351,20 @@
 
                     <!-- Icon Block -->
                     <div class="flex gap-x-5 sm:gap-x-8">
-                        <svg class="shrink-0 mt-2 size-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="shrink-0 mt-2 size-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M7 10v12" />
                             <path
                                 d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z" />
                         </svg>
                         <div class="grow">
                             <h3 class="text-base sm:text-lg font-semibold text-gray-800">
-                                Simple and affordable
+                                Citra Brand Nasional
                             </h3>
                             <p class="mt-1 text-gray-600">
-                                From boarding passes to movie tickets, there's pretty much nothing you can't
-                                store with Preline.
+                                Kami membangun identitas Sari Pasundan sebagai brand Kue Balok khas Jawa Barat yang dikenal
+                                secara nasional.
                             </p>
                         </div>
                     </div>
@@ -409,9 +391,9 @@
                         Misi Kami
                     </h2>
                     <p class="mt-2 md:mt-4 text-gray-500">
-                        Besides working with start-up enterprises as a partner for digitalization, we have built
-                        enterprise
-                        products for common pain points that we have encountered in various products and projects.
+                        Kami berkomitmen membangun bisnis yang berkelanjutan dengan mengutamakan kepuasan konsumen. Kami
+                        menjaga kualitas rasa, pelayanan, dan kecepatan distribusi agar setiap pelanggan dapat merasakan
+                        kelezatan Jajanan Sari Pasundan di mana pun berada.
                     </p>
                 </div>
                 <!-- End Col -->
@@ -420,7 +402,7 @@
                     <div class="grid sm:grid-cols-2 gap-8 md:gap-12">
                         <!-- Icon Block -->
                         <div class="flex gap-x-5">
-                            <svg class="shrink-0 mt-1 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
+                            <svg class="shrink-0 mt-1 size-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect width="18" height="10" x="3" y="11" rx="2" />
@@ -431,10 +413,11 @@
                             </svg>
                             <div class="grow">
                                 <h3 class="text-lg font-semibold text-gray-800">
-                                    Creative minds
+                                    Menjaga Kualitas Produk
                                 </h3>
                                 <p class="mt-1 text-gray-600">
-                                    We choose our teams carefully. Our people are the secret to great work.
+                                    Kami memastikan setiap Kue Balok diproduksi dengan standar tinggi agar konsumen
+                                    mendapatkan rasa dan tekstur terbaik.
                                 </p>
                             </div>
                         </div>
@@ -442,7 +425,7 @@
 
                         <!-- Icon Block -->
                         <div class="flex gap-x-5">
-                            <svg class="shrink-0 mt-1 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
+                            <svg class="shrink-0 mt-1 size-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M7 10v12" />
@@ -451,12 +434,10 @@
                             </svg>
                             <div class="grow">
                                 <h3 class="text-lg font-semibold text-gray-800">
-                                    Simple and affordable
+                                    Memberikan Pelayanan Terbaik
                                 </h3>
                                 <p class="mt-1 text-gray-600">
-                                    From boarding passes to movie tickets, there's pretty much nothing you can't store
-                                    with
-                                    Preline.
+                                    Kami melayani setiap pelanggan dengan cepat, ramah, dan profesional.
                                 </p>
                             </div>
                         </div>
@@ -464,7 +445,7 @@
 
                         <!-- Icon Block -->
                         <div class="flex gap-x-5">
-                            <svg class="shrink-0 mt-1 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
+                            <svg class="shrink-0 mt-1 size-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
@@ -472,12 +453,11 @@
                             </svg>
                             <div class="grow">
                                 <h3 class="text-lg font-semibold text-gray-800">
-                                    Industry-leading documentation
+                                    Memperluas Jangkauan Pasar
                                 </h3>
                                 <p class="mt-1 text-gray-600">
-                                    Our documentation and extensive Client libraries contain everything a business needs
-                                    to
-                                    build a custom integration.
+                                    Kami terus membuka cabang dan memperkuat distribusi agar produk mudah diakses di seluruh
+                                    Indonesia.
                                 </p>
                             </div>
                         </div>
@@ -485,7 +465,7 @@
 
                         <!-- Icon Block -->
                         <div class="flex gap-x-5">
-                            <svg class="shrink-0 mt-1 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg"
+                            <svg class="shrink-0 mt-1 size-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -495,11 +475,11 @@
                             </svg>
                             <div class="grow">
                                 <h3 class="text-lg font-semibold text-gray-800">
-                                    Designing for people
+                                    Mendorong Pertumbuhan Berkelanjutan
                                 </h3>
                                 <p class="mt-1 text-gray-600">
-                                    We actively pursue the right balance between functionality and aesthetics, creating
-                                    delightful experiences.
+                                    Kami membangun sistem bisnis yang sehat untuk mendukung pertumbuhan jangka panjang dan
+                                    keberlanjutan usaha.
                                 </p>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 <!-- Testimonials -->
-<div class="py-6 lg:py-8 mx-auto">
+<div class="py-6 md:py-12 mx-auto">
     <!-- Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 md:items-center">
         <div class="relative h-80 md:h-150 bg-gray-100 rounded-2xl ">

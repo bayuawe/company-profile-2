@@ -13,6 +13,7 @@ class FrontController extends Controller
     //
     public function index()
     {
+
         $featuredProducts = Product::with('category')
             ->where('featured', true)
             ->latest()
@@ -22,8 +23,9 @@ class FrontController extends Controller
         $categories = Category::withCount('products')
             ->take(4)
             ->get();
+        $settings = Setting::getSiteSettings();
 
-        return view('front.index', compact('featuredProducts', 'categories'));
+        return view('front.index', compact('featuredProducts', 'categories', 'settings'));
     }
 
     public function products(Request $request)
@@ -60,24 +62,32 @@ class FrontController extends Controller
                 break;
         }
 
+        
+
         $products = $query->paginate(12)->withQueryString();
         $categories = Category::withCount('products')->get();
+        $settings = Setting::getSiteSettings();
 
-        return view('front.products', compact('products', 'categories'));
+        return view('front.products', compact('products', 'categories', 'settings'));
     }
 
     public function about()
     {
-        return view('front.about');
+        $categories = Category::all();
+        $settings = Setting::getSiteSettings();
+        return view('front.about', compact('categories', 'settings'));
     }
 
     public function contact()
     {
-        return view('front.contact');
+        $categories = Category::all();
+        $settings = Setting::getSiteSettings();
+        return view('front.contact', compact('categories', 'settings'));
     }
 
     public function productDetail($slug)
     {
+        $categories = Category::all();
         $product = Product::with(['category', 'media'])
             ->where('slug', $slug)
             ->where('is_active', true)

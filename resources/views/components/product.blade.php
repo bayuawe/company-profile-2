@@ -1,4 +1,4 @@
-<div class="mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
+<div class="py-6 md:py-12 max-w-2xl text-center mx-auto">
     <h1 class="font-medium text-black text-3xl sm:text-4xl ">
         Featured Products
     </h1>
@@ -10,9 +10,16 @@
     @foreach ($featuredProducts as $product)
         <div class="group flex flex-col">
             <div class="relative">
-                <div class="aspect-4/4 overflow-hidden rounded-2xl">
-                    <img class="size-full object-cover rounded-2xl" src="{{ $product->image_url }}" alt="Product Image">
-                </div>
+                @if ($product->hasMedia('products'))
+                    <div class="aspect-4/4 overflow-hidden rounded-2xl">
+                        <img class="size-full object-cover rounded-2xl" src="{{ $product->image_url }}"
+                            alt="Product Image">
+                    </div>
+                @else
+                    <div class="aspect-4/4 overflow-hidden rounded-2xl flex items-center justify-center bg-gray-200">
+                        <span class="text-gray-500 text-sm">No Image</span>
+                    </div>
+                @endif
 
                 <div class="pt-4">
                     <h3 class="font-medium md:text-lg text-black ">

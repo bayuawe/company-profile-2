@@ -1,4 +1,4 @@
-<div class="grid md:grid-cols-5 gap-10 py-8">
+<div class="py-6 md:py-12 grid md:grid-cols-5 gap-10">
     <div class="md:col-span-2">
         <div class="max-w-xs">
             <h2 class="text-2xl font-bold md:text-4xl md:leading-tight">Frequently<br>asked questions</h2>
