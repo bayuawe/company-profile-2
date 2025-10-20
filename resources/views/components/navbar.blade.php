@@ -2,7 +2,8 @@
 <div class="py-2  text-center bg-yellow-500">
     <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <p class="text-sm text-black">
-            Selamat datang di website resmi Sari Pasundan Pekanbaru! Nikmati <strong>diskon 20%</strong> untuk dengan mendaftar menjadi reseller.
+            Selamat datang di website resmi Sari Pasundan Pekanbaru! Nikmati <strong>diskon 20%</strong> untuk dengan
+            mendaftar menjadi reseller.
         </p>
     </div>
 </div>
@@ -30,7 +31,7 @@
 
         <!-- Button Group -->
         <div class="flex items-center gap-x-1 lg:gap-x-2 ms-auto py-1 lg:ps-6 lg:order-3 lg:col-span-3">
-            <button type="button"
+            {{-- <button type="button"
                 class="size-9.5 relative flex justify-center items-center rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none">
                 <span class="sr-only">Search</span>
                 <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -54,7 +55,7 @@
             <button type="button"
                 class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-yellow-400 text-black hover:bg-yellow-500 focus:outline-hidden focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none">
                 Sign in
-            </button>
+            </button> --}}
 
             <div class="lg:hidden">
                 <button type="button"

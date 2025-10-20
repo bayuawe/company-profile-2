@@ -6,9 +6,14 @@
 
 <div class="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12">
     <div class="aspect-w-16 aspect-h-6 lg:aspect-h-14 overflow-hidden bg-gray-100 rounded-2xl ">
-        <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
-            src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Contacts Image">
+        @if ($settings->hasMedia('contact_image'))
+            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
+                src="{{ $settings->getFirstMediaUrl('contact_image') }}" alt="Contacts Image">
+        @else
+            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
+                src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Contacts Image">
+        @endif
     </div>
     <!-- End Col -->
 
@@ -94,3 +99,70 @@
     </div>
     <!-- End Col -->
 </div>
+
+<!-- Contact Form -->
+<div class="mt-12 max-w-2xl mx-auto">
+    <div class="text-center mb-8">
+        <h2 class="text-2xl font-semibold text-black">Kirim Pesan</h2>
+        <p class="mt-2 text-gray-600">Kami siap membantu Anda. Kirim pesan dan kami akan segera merespons.</p>
+    </div>
+
+    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+        <form action="{{ route('front.contact.submit') }}" method="POST">
+            @csrf
+            <div class="grid gap-4">
+                <div>
+                    <label for="name" class="block mb-2 text-sm text-gray-700 font-medium">Nama Lengkap</label>
+                    <input type="text" name="name" id="name" required
+                        class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-yellow-500 focus:ring-yellow-500 disabled:opacity-50 disabled:pointer-events-none"
+                        placeholder="Masukkan nama lengkap Anda">
+                </div>
+
+                <div>
+                    <label for="email" class="block mb-2 text-sm text-gray-700 font-medium">Email</label>
+                    <input type="email" name="email" id="email" required
+                        class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-yellow-500 focus:ring-yellow-500 disabled:opacity-50 disabled:pointer-events-none"
+                        placeholder="Masukkan email Anda">
+                </div>
+
+                <div>
+                    <label for="message" class="block mb-2 text-sm text-gray-700 font-medium">Pesan</label>
+                    <textarea id="message" name="message" rows="4" required
+                        class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-yellow-500 focus:ring-yellow-500 disabled:opacity-50 disabled:pointer-events-none"
+                        placeholder="Tulis pesan Anda di sini"></textarea>
+                </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="mt-4 flex">
+                <div class="flex">
+                    <input id="privacy" name="privacy" type="checkbox" required
+                        class="shrink-0 mt-1.5 border-gray-200 rounded-sm text-yellow-600 focus:ring-yellow-500">
+                </div>
+                <div class="ms-3">
+                    <label for="privacy" class="text-sm text-gray-600">
+                        Dengan mengirim formulir ini, saya telah membaca dan menyetujui
+                        <a class="text-yellow-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="#">
+                            Kebijakan Privasi
+                        </a>
+                    </label>
+                </div>
+            </div>
+            <!-- End Checkbox -->
+
+            <div class="mt-6">
+                <button type="submit"
+                    class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-yellow-500 text-black hover:bg-yellow-400 focus:outline-hidden focus:bg-yellow-400 disabled:opacity-50 disabled:pointer-events-none transition">
+                    Kirim Pesan
+                </button>
+            </div>
+
+            <div class="mt-3 text-center">
+                <p class="text-sm text-gray-500">
+                    Kami akan merespons dalam 1-2 hari kerja.
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- End Contact Form -->

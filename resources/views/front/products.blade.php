@@ -14,6 +14,33 @@
 
                 <!-- Sidebar -->
                 <aside class="lg:col-span-1 w-full relative lg:sticky lg:top-4 lg:h-fit lg:self-start">
+                    <!-- Search -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-neutral">Search Products</h2>
+                        <form action="{{ route('front.products') }}" method="get" class="space-y-4">
+                            @foreach (request()->except('search') as $key => $value)
+                                <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+                            @endforeach
+                            <div class="max-w-sm space-y-3">
+                                <input type="text" name="search" value="{{ request('search') }}"
+                                    class="py-2.5 sm:py-3 px-4 block w-full border-yellow-500 rounded-lg sm:text-sm focus:border-yellow-500 focus:ring-yellow-500 disabled:opacity-50 disabled:pointer-events-none"
+                                    placeholder="Search products...">
+                            </div>
+                            <div class="flex gap-2">
+                                <button type="submit"
+                                    class="flex-1 bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition">
+                                    Search
+                                </button>
+                                @if (request('search'))
+                                    <a href="{{ route('front.products') }}"
+                                        class="flex-1 text-center bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-200 transition">
+                                        Clear
+                                    </a>
+                                @endif
+                            </div>
+                        </form>
+                    </div>
+
                     <!-- Categories Filter -->
                     <div class="mb-8">
                         <h2 class="text-xl font-bold mb-4 text-warning">Categories</h2>

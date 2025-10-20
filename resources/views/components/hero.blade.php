@@ -7,8 +7,8 @@
         }'
         class="relative rounded-2xl overflow-hidden">
 
-        {{-- Container dengan rasio 16:5 --}}
-        <div class="relative w-full overflow-hidden" style="padding-top: 31.25%;">
+        {{-- Container dengan rasio 16:9 --}}
+        <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
             {{-- Carousel --}}
             <div class="hs-carousel absolute inset-0 w-full h-full">
                 <div class="hs-carousel-body flex transition-transform duration-700 ease-in-out h-full">

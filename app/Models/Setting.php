@@ -58,6 +58,10 @@ class Setting extends Model implements HasMedia
         $this->addMediaCollection('about_image')
             ->useDisk('public')
             ->singleFile();
+
+        $this->addMediaCollection('contact_image')
+            ->useDisk('public')
+            ->singleFile();
     }
 
     public function registerMediaConversions(?Media $media = null): void

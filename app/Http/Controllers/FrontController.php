@@ -23,15 +23,26 @@ class FrontController extends Controller
         $categories = Category::withCount('products')
             ->take(4)
             ->get();
+
+        $testimonials = \App\Models\Testimonial::latest('time')->take(6)->get();
         $settings = Setting::getSiteSettings();
 
-        return view('front.index', compact('featuredProducts', 'categories', 'settings'));
+        return view('front.index', compact('featuredProducts', 'categories', 'testimonials', 'settings'));
     }
 
     public function products(Request $request)
     {
         $query = Product::with(['category', 'media'])
             ->where('is_active', true);
+
+        // Search filter
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', '%' . $search . '%')
+                    ->orWhere('description', 'like', '%' . $search . '%');
+            });
+        }
 
         // Filter by category
         if ($request->filled('category')) {
@@ -75,8 +86,9 @@ class FrontController extends Controller
     {
         $categories = Category::all();
         $settings = Setting::getSiteSettings();
+        $testimonials = \App\Models\Testimonial::latest('time')->take(6)->get();
 
-        return view('front.about', compact('categories', 'settings'));
+        return view('front.about', compact('categories', 'settings', 'testimonials'));
     }
 
     public function contact()
@@ -105,7 +117,7 @@ class FrontController extends Controller
         $settings = Setting::getSiteSettings();
         $settings->phone = preg_replace('/[^0-9]/', '', $settings->phone);
         if (str_starts_with($settings->phone, '0')) {
-            $settings->phone = '62'.substr($settings->phone, 1);
+            $settings->phone = '62' . substr($settings->phone, 1);
         }
 
         return view('front.product-detail', compact('product', 'relatedProducts', 'categories', 'settings'));

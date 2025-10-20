@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CategoryTableSeeder::class,    // Seed categories
             ProductTableSeeder::class,     // Seed products
             SettingTableSeeder::class, // Seed website settings
+            TestimonialTableSeeder::class, // Seed testimonials
         ]);
     }
 }

@@ -81,6 +81,12 @@ class SettingForm
                     ->schema([
                         Grid::make(1)
                             ->schema([
+                                SpatieMediaLibraryFileUpload::make('contact_image')
+                                    ->collection('contact_image')
+                                    ->conversion('preview')
+                                    ->imageEditor()
+                                    ->panelLayout('integrated')
+                                    ->label('Contact Image'),
                                 TextInput::make('contact_address')
                                     ->label('Alamat'),
                                 TextInput::make('contact_email')
