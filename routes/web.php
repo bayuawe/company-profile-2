@@ -9,4 +9,6 @@ Route::get('/products/{slug}', [FrontController::class, 'productDetail'])->name(
 Route::get('/about', [FrontController::class, 'about'])->name('front.about');
 Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
 Route::post('/contact', [FrontController::class, 'submitContact'])->name('front.contact.submit');
+Route::get('/sitemap', [FrontController::class, 'sitemap'])->name('front.sitemap');
+Route::get('/sitemap.xml', [FrontController::class, 'sitemapXml'])->name('front.sitemap.xml');
 

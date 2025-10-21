@@ -117,6 +117,14 @@
                         Contact
                     </a>
                 </div>
+
+                <div>
+                    <a href="{{ route('front.sitemap') }}"
+                        class="relative inline-block text-black focus:outline-hidden
+       {{ Route::currentRouteNamed('front.sitemap') ? 'before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400' : 'hover:text-gray-600 focus:text-gray-600' }}">
+                        Sitemap
+                    </a>
+                </div>
             </div>
         </div>
         <!-- End Collapse -->

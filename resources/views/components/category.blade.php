@@ -30,7 +30,7 @@
                     </h3>
                 </div>
 
-                <a class="after:absolute after:inset-0 after:z-1" href="#"></a>
+                <a class="after:absolute after:inset-0 after:z-1" href="{{ route('front.products', ['category' => $category->id]) }}"></a>
             </div>
         </div>
     @endforeach

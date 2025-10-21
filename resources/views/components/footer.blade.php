@@ -26,7 +26,7 @@
             <div class="mt-3 grid space-y-3 text-sm">
                 @foreach ($categories as $category)
                     <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
-                            href="#">{{ $category->name }}</a></p>
+                            href="{{ route('front.products', ['category' => $category->id]) }}">{{ $category->name }}</a></p>
                 @endforeach
             </div>
         </div>
@@ -43,7 +43,7 @@
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
                         href="#">Customers</a></p>
                 <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-hidden focus:text-gray-800"
-                        href="#">Sitemap</a></p>
+                        href="{{ route('front.sitemap') }}">Sitemap</a></p>
             </div>
         </div>
         <!-- End Col -->

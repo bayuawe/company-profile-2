@@ -140,4 +140,23 @@ class FrontController extends Controller
 
         return back()->with('success', 'Thank you for your message. We will get back to you soon.');
     }
+
+    public function sitemap()
+    {
+        $categories = Category::all();
+        $products = Product::where('is_active', true)->get();
+        $settings = Setting::getSiteSettings();
+
+        return view('front.sitemap', compact('categories', 'products', 'settings'));
+    }
+
+    public function sitemapXml()
+    {
+        $categories = Category::all();
+        $products = Product::where('is_active', true)->get();
+        $settings = Setting::getSiteSettings();
+
+        return response()->view('front.sitemap-xml', compact('categories', 'products', 'settings'))
+            ->header('Content-Type', 'application/xml');
+    }
 }
