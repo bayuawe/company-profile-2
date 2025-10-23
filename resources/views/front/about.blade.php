@@ -36,9 +36,9 @@
                 <div
                     class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
                     <div
-                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-gray-100">
+                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-white">
                         @if ($settings->hasMedia('site_logo'))
-                            <img src="{{ $settings->getFirstMediaUrl('site_logo', 'preview') }}" alt="Logo"
+                            <img src="{{ $settings->getFirstMediaUrl('site_logo') }}" alt="Logo"
                                 class="h-full w-full object-contain">
                         @else
                             <div
@@ -74,9 +74,9 @@
                 <div
                     class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
                     <div
-                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-gray-100">
+                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-white">
                         @if ($settings->hasMedia('site_logo'))
-                            <img src="{{ $settings->getFirstMediaUrl('site_logo', 'preview') }}" alt="Logo"
+                            <img src="{{ $settings->getFirstMediaUrl('site_logo') }}" alt="Logo"
                                 class="h-full w-full object-contain">
                         @else
                             <div
@@ -102,31 +102,6 @@
                         Inovasi produk kami berlanjut dengan penambahan varian rasa yang menggugah selera, menjadikan
                         Kue Balok lebih menarik bagi berbagai kalangan.
                     </p>
-
-                    <div class="mt-3">
-                        <!-- Card -->
-                        <a class="block border border-gray-200 rounded-lg hover:shadow-2xs focus:outline-hidden"
-                            href="#">
-                            <div class="relative flex items-center overflow-hidden">
-                                <img class="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
-                                    src="https://images.unsplash.com/photo-1661956600655-e772b2b97db4?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="Blog Image">
-
-                                <div class="grow p-4 ms-32 sm:ms-48">
-                                    <div class="min-h-24 flex flex-col justify-center">
-                                        <h3 class="font-semibold text-sm text-gray-800">
-                                            Studio by Mailchimp
-                                        </h3>
-                                        <p class="mt-1 text-sm text-gray-500">
-                                            Produce professional, reliable streams easily leveraging Mailchimp's innovative
-                                            broadcast studio.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- End Card -->
-                    </div>
                 </div>
                 <!-- End Right Content -->
             </div>
@@ -138,9 +113,9 @@
                 <div
                     class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
                     <div
-                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-gray-100">
+                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-white">
                         @if ($settings->hasMedia('site_logo'))
-                            <img src="{{ $settings->getFirstMediaUrl('site_logo', 'preview') }}" alt="Logo"
+                            <img src="{{ $settings->getFirstMediaUrl('site_logo') }}" alt="Logo"
                                 class="h-full w-full object-contain">
                         @else
                             <div
@@ -177,9 +152,9 @@
                 <div
                     class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200">
                     <div
-                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-gray-100">
+                        class="relative z-10 flex items-center justify-center h-10 w-10 rounded overflow-hidden bg-white">
                         @if ($settings->hasMedia('site_logo'))
-                            <img src="{{ $settings->getFirstMediaUrl('site_logo', 'preview') }}" alt="Logo"
+                            <img src="{{ $settings->getFirstMediaUrl('site_logo') }}" alt="Logo"
                                 class="h-full w-full object-contain">
                         @else
                             <div

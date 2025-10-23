@@ -6,7 +6,7 @@
             <a class="flex-none font-semibold text-xl text-black focus:outline-hidden focus:opacity-80" href="#"
                 aria-label="Brand">
                 @if ($settings->hasMedia('site_logo'))
-                    <img class="h-10" src="{{ $settings->getFirstMediaUrl('site_logo', 'preview') }}" alt="Logo">
+                    <img class="h-10" src="{{ $settings->getFirstMediaUrl('site_logo') }}" alt="Logo">
                 @else
                     <div
                         class="h-12 w-12 flex items-center justify-center bg-gray-300 text-gray-700 font-semibold rounded text-sm">

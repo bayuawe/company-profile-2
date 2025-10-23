@@ -21,6 +21,7 @@ class FrontController extends Controller
             ->get();
 
         $categories = Category::withCount('products')
+            ->orderBy('created_at', 'desc')
             ->take(4)
             ->get();
 
@@ -71,7 +72,7 @@ class FrontController extends Controller
                 $query->orderBy('name', 'asc');
                 break;
             default:
-                $query->latest();
+                $query->orderBy('created_at', 'desc');
                 break;
         }
 

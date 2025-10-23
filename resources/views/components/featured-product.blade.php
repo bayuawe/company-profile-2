@@ -14,7 +14,7 @@
                     class="aspect-4/4 overflow-hidden rounded-2xl bg-gray-100 flex items-center justify-center text-gray-500 font-semibold relative">
                     @if ($product->hasMedia('products'))
                         <img class="w-full h-full object-cover rounded-2xl"
-                            src="{{ $product->getFirstMediaUrl('products', 'preview') }}" alt="{{ $product->name }}">
+                            src="{{ $product->getFirstMediaUrl('products') }}" alt="{{ $product->name }}">
 
                         @if ($product->featured)
                             <span

@@ -2,7 +2,7 @@
 <div class="py-2  text-center bg-yellow-500">
     <div class="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <p class="text-sm text-black">
-            Selamat datang di website resmi Sari Pasundan Pekanbaru! Nikmati <strong>diskon 20%</strong> untuk dengan
+            Selamat datang di website resmi Sari Pasundan Pekanbaru! Nikmati <strong>diskon 10%</strong> untuk dengan
             mendaftar menjadi reseller.
         </p>
     </div>
@@ -16,9 +16,9 @@
         <div class="lg:col-span-3 flex items-center">
             <!-- Logo -->
             <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80"
-                href="index.html" aria-label="Preline">
+                href="{{ route('index') }}" aria-label="Preline">
                 @if ($settings->hasMedia('site_logo'))
-                    <img class="h-8" src="{{ $settings->getFirstMediaUrl('site_logo', 'preview') }}" alt="Logo">
+                    <img class="h-8" src="{{ $settings->getFirstMediaUrl('site_logo') }}" alt="{{ $settings->site_name }}">
                 @else
                     <div
                         class="h-12 w-12 flex items-center justify-center bg-gray-300 text-gray-700 font-semibold rounded text-sm">
@@ -118,13 +118,13 @@
                     </a>
                 </div>
 
-                <div>
+                {{-- <div>
                     <a href="{{ route('front.sitemap') }}"
                         class="relative inline-block text-black focus:outline-hidden
        {{ Route::currentRouteNamed('front.sitemap') ? 'before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400' : 'hover:text-gray-600 focus:text-gray-600' }}">
                         Sitemap
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- End Collapse -->

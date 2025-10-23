@@ -15,7 +15,7 @@
                     @foreach ($settings->getMedia('hero_images') as $media)
                         <div class="hs-carousel-slide flex-shrink-0 w-full h-full">
                             <div class="w-full h-full bg-cover bg-center bg-no-repeat rounded-2xl"
-                                style="background-image: url('{{ $media->getUrl('preview') }}');">
+                                style="background-image: url('{{ $media->getUrl() }}');">
                             </div>
                         </div>
                     @endforeach

@@ -1,5 +1,5 @@
-# TODO: Add Search Feature to Products Page
-
-- [x] Update FrontController.php products method to handle search query (filter by name and description)
-- [x] Update products.blade.php to add search input field in the sidebar
-- [x] Test the search functionality on the products page
+- [x] Add header action in ListTestimonials.php to run the `app:fetch-google-reviews` command.
+- [x] Handle success/error notifications in the dashboard.
+- [x] Ensure API keys are configured (GOOGLE_PLACES_API_KEY and GOOGLE_PLACES_PLACE_ID in .env).
+- [x] Test the button and verify reviews appear in dashboard and front-end.
+- [x] No changes needed for front-end as it's already implemented.

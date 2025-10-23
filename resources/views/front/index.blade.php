@@ -7,7 +7,7 @@
 
         @include('components.category')
 
-        @include('components.product')
+        @include('components.featured-product')
 
         @include('components.testimonial')
 
