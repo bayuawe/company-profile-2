@@ -22,6 +22,11 @@ class CategoryResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Category';
 
+    public static function canViewAny(): bool
+    {
+        return auth()->user()->hasRole(['superadmin', 'admin']);
+    }
+
     public static function form(Schema $schema): Schema
     {
         return CategoryForm::configure($schema);

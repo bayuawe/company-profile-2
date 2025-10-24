@@ -30,7 +30,7 @@
                 @endforeach
             </div>
         </div>
-        <!-- End Col -->
+        <!-- End Col -->`
 
         <div>
             <h4 class="text-xs font-semibold text-gray-900 uppercase">Company</h4>

@@ -22,6 +22,11 @@ class SettingResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Setting';
 
+    public static function canViewAny(): bool
+    {
+        return auth()->user()->hasRole('superadmin');
+    }
+
     public static function form(Schema $schema): Schema
     {
         return SettingForm::configure($schema);

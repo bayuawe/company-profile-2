@@ -22,6 +22,11 @@ class TestimonialResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Testimonial';
 
+    public static function canViewAny(): bool
+    {
+        return auth()->user()->hasRole(['superadmin', 'admin']);
+    }
+
     public static function form(Schema $schema): Schema
     {
         return TestimonialForm::configure($schema);

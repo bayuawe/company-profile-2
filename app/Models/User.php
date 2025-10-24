@@ -9,11 +9,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -22,6 +23,14 @@ class User extends Authenticatable implements FilamentUser
      */
     protected $fillable = [
         'name',
+        'fullname',
+        'birthdate',
+        'phone',
+        'address',
+        'subdistrict',
+        'district',
+        'city_regency',
+        'province',
         'email',
         'password',
     ];
@@ -45,12 +54,33 @@ class User extends Authenticatable implements FilamentUser
     {
         return [
             'email_verified_at' => 'datetime',
+            'birthdate' => 'date',
             'password' => 'hashed',
         ];
     }
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return true;
+        return $this->hasRole(['superadmin', 'admin']);
+    }
+
+    public function province()
+    {
+        return $this->belongsTo(Province::class, 'provinces');
+    }
+
+    public function cityRegency()
+    {
+        return $this->belongsTo(Regency::class, 'city_regencies');
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class, 'districts');
+    }
+
+    public function subdistrict()
+    {
+        return $this->belongsTo(Village::class, 'subdistricts');
     }
 }

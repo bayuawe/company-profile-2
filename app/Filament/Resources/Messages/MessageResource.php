@@ -24,6 +24,11 @@ class MessageResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Message';
 
+    public static function canViewAny(): bool
+    {
+        return auth()->user()->hasRole(['superadmin', 'admin']);
+    }
+
     public static function form(Schema $schema): Schema
     {
         return MessageForm::configure($schema);

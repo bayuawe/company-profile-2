@@ -22,6 +22,11 @@ class ProductResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Product';
 
+    public static function canViewAny(): bool
+    {
+        return auth()->user()->hasRole(['superadmin', 'admin']);
+    }
+
     public static function form(Schema $schema): Schema
     {
         return ProductForm::configure($schema);
